@@ -36,7 +36,11 @@
     let elmCheckobox = document.getElementById('chooseItem');
     console.log(elmCheckobox);
     elmCheckobox.onchange = function () {
-        alert("click checkbox");
+        //alert("click checkbox");
+        let elmParagraph = document.createElement('p');
+        //console.log(elmParagraph);
+        elmParagraph.innerHTML = '烤煎饼';
+        document.body.appendChild(elmParagraph);
     }
 </script>
 
