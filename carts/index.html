@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <!--<link rel="stylesheet" href="gouwu.css">-->
+    <style>
+        td{
+            border: black solid 1px;
+        }
+
+    </style>
+    <script src="gouwu.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>序号</td>
+        <td>商品名称</td>
+        <td>数量</td>
+        <td>单价</td>
+        <td>小计</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td><input id="chooseItem" type="checkbox"></td>
+        <td>烤煎饼</td>
+        <td><span><input type="button" value="-"><span>0</span><input type="button" value="+"></span></td>
+        <td><span>单价：</span><span>2</span></td>
+        <td><span>小计：</span><span>0</span></td>
+        <td><button>删除</button></td>
+    </tr>
+</table>
+
+<script>
+    let elmCheckobox = document.getElementById('chooseItem');
+    console.log(elmCheckobox);
+    elmCheckobox.onchange = function () {
+        alert("click checkbox");
+    }
+</script>
+
+</body>
+</html>
