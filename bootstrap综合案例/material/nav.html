@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航条</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+<!--基础导航条。样式：class="navbar navbar-default"，属性：role="navigation"-->
+<div class="navbar navbar-default" role="navigation">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="##">网站首页</a></li>
+        <li><a href="##">系列教程</a></li>
+        <li><a href="##">名师介绍</a></li>
+        <li><a href="##">成功案例</a></li>
+        <li><a href="##">关于我们</a></li>
+    </ul>
+</div>
+
+<!--导航条标题： class="navbar-brand
+二级菜单：class="dropdown-toggle"  data-toggle="dropdown"
+带表单导航条：class="navbar-form"
+导航条位置控制：class="navbar-left"-->
+<div class="navbar navbar-default" role="navigation">
+    　<div class="navbar-header">
+    　    <a href="##" class="navbar-brand">公司LOGO</a>
+    　</div>
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="##">网站首页</a></li>
+        <li class="dropdown">
+            <a href="##" data-toggle="dropdown" class="dropdown-toggle">系列教程<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="##">CSS3</a></li>
+                <li><a href="##">JavaScript</a></li>
+                <li class="disabled"><a href="##">PHP</a></li>
+            </ul>
+        </li>
+        <li><a href="##">名师介绍</a></li>
+        <li><a href="##">成功案例</a></li>
+        <li><a href="##">关于我们</a></li>
+    </ul>
+    <form action="##" class="navbar-form navbar-left" rol="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="请输入关键词" />
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+    </form>
+</div>
+
+</body>
+</html>
