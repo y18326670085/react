@@ -15,6 +15,28 @@
             color: white;
             font-weight: bold;
         }
+        .navbar-default .navbar-toggle .icon-bar{
+            background-color: #fff;
+        }
+        .navbar-default .navbar-toggle{
+            background: transparent;
+            border: none;
+        }
+        .navbar-default .navbar-toggle:hover{
+            background: transparent;
+            border: none;
+        }
+        .navbar-default .navbar-collapse{
+            border: none;
+        }
+        @media(max-width: 768px){
+            .myloin{
+               position: absolute;
+                top:8px;
+                left: 50%;
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -24,13 +46,13 @@
         <div class="container">
             <div class="navbar-header"><!--navbar-header-->
                 <a href="#"><img src="img/logo.png" alt=""></a>
-                <button class="navbar-toggle" data-target="#example-navbar-colapse" data-toggle="collapse">
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse navbar-left" id="example-navbar-colapse">
+            <div class="collapse navbar-collapse navbar-left">
                 <ul class="nav navbar-nav">
                     <li><a href="#">首页</a></li>
                     <li><a href="#">首页</a></li>
@@ -39,7 +61,7 @@
                     <li><a href="#">首页</a></li>
                 </ul>
             </div>
-            <div class="nav navbar-nav navbar-right">
+            <div class="nav navbar-nav navbar-right myloin">
                 <a class="navbar-text navbar-link" href="#">微博登录</a>
                 <a class="navbar-text" href="#">|</a>
                 <a class="navbar-text navbar-link" href="#">微博注册</a>
@@ -48,41 +70,6 @@
     </nav>
 </div>
 
-
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">菜鸟教程</a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">iOS</a></li>
-                <li><a href="#">SVN</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Java <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">jmeter</a></li>
-                        <li><a href="#">EJB</a></li>
-                        <li><a href="#">Jasper Report</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">分离的链接</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">另一个分离的链接</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <!--主体-->
 <!--尾部-->
