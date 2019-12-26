@@ -41,16 +41,22 @@
                 font-size: 1em;
             }
         }
+        .myh3{
+            color: #1b6d85;
+        }
+        .mybtn{
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
 <!--使用container-->
 <div class="container">
-    <div class="row">
+    <div class="row cont">
         <!--使用col-md-4-->
-        <div class="col-md-4 col-xs-12" style="border: black solid 1px;">
+        <div class="col-md-4 col-xs-12 text-center" style="border: black solid 1px;">
             <img src="img/cont1.png" alt="">
-            <h3>SAE</h3>
+            <h3 class="myh3">SAE</h3>
             <p>云应用</p>
         </div>
         <!--使用col-md-8-->
@@ -70,11 +76,39 @@
                 <li>无需运营管理与架构设计</li>
             </ul>
             <!--btn btn-primary联合使用-->
-            <a class="btn btn-primary" href="#">了解详情</a>
+            <a class="btn btn-primary mybtn" href="#">了解详情</a>
         </div>
     </div>
 </div>
 <div class="container" style="border: #1b6d85 solid 1px;">另外一个container</div>
 
+
+<div class="container">
+    <div class="row cont">
+        <!--使用col-md-push-8 后推8行-->
+        <div class="col-md-4 col-xs-12 text-center col-md-push-8" style="border: black solid 1px;">
+            <img src="img/cont1.png" alt="">
+            <h3 class="myh3">SAE</h3>
+            <p>云应用</p>
+        </div>
+        <!--使用col-md-pull-4 前推4行-->
+        <div class="col-md-8 col-xs-12 col-md-pull-4" style="border: black solid 1px;">
+            <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+            <p>国内第一家公有计算平台，支持PHP,Java</p>
+            <ul class="col-md-6 col-xs-12">
+                <li>弹性扩展、负载均衡智能应对大数据处理请求</li>
+                <li>沙箱技术隔离应用</li>
+                <li>无需运营管理与架构设计</li>
+            </ul>
+            <ul class="col-md-6 col-xs-12">
+                <li>弹性扩展，负载均衡智能应对大数据智能处理请求</li>
+                <li>沙箱技术隔离应用</li>
+                <li>无需运营管理与架构设计</li>
+            </ul>
+            <!--btn btn-primary联合使用-->
+            <a class="btn btn-primary mybtn" href="#">了解详情</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
