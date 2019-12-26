@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        #myNav{
+            background: #148cca;
+        }
+        #myNav a{
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-default .navbar-toggle .icon-bar{
+            background-color: #fff;
+        }
+        .navbar-default .navbar-toggle{
+            background: transparent;
+            border: none;
+        }
+        .navbar-default .navbar-toggle:hover{
+            background: transparent;
+            border: none;
+        }
+        .navbar-default .navbar-collapse{
+            border: none;
+        }
+        @media(max-width: 768px){
+            .myloin{
+                position: absolute;
+                top:8px;
+                left: 50%;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--使用container-->
+<div class="container">
+    <div class="row">
+        <!--使用col-md-4-->
+        <div class="col-md-4 col-xs-12" style="border: black solid 1px;">
+            <img src="img/cont1.png" alt="">
+            <h3>SAE</h3>
+            <p>云应用</p>
+        </div>
+        <!--使用col-md-8-->
+        <div class="col-md-8 col-xs-12" style="border: black solid 1px;">
+            <h3>应用开发、优化及运行的PaaS云计算平台</h3>
+            <p>国内第一家公有计算平台，支持PHP,Java</p>
+            <!--使用col-md-8 下一级col-md-6 左右平分-->
+            <ul class="col-md-6 col-xs-12">
+                <li>弹性扩展、负载均衡智能应对大数据处理请求</li>
+                <li>沙箱技术隔离应用</li>
+                <li>无需运营管理与架构设计</li>
+            </ul>
+            <!--使用col-md-8 下一级col-md-6 左右平分-->
+            <ul class="col-md-6 col-xs-12">
+                <li>弹性扩展，负载均衡智能应对大数据智能处理请求</li>
+                <li>沙箱技术隔离应用</li>
+                <li>无需运营管理与架构设计</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container" style="border: #1b6d85 solid 1px;">另外一个container</div>
+
+</body>
+</html>

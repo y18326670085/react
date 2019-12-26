@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f614b28-5023-49a8-9561-26015bf91f6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bootstrap综合案例/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap综合案例/demo主体.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap综合案例/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap综合案例/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,17 +20,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap综合案例/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" selection-start-line="5" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="1541">
+              <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo.html">
+        <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo主体.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="373">
+              <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo轮播图.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="39" column="12" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="39" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -55,8 +70,9 @@
         <option value="$PROJECT_DIR$/carts/dombom.html" />
         <option value="$PROJECT_DIR$/carts/index.html" />
         <option value="$PROJECT_DIR$/bootstrap综合案例/material/nav.html" />
-        <option value="$PROJECT_DIR$/bootstrap综合案例/index.html" />
         <option value="$PROJECT_DIR$/bootstrap综合案例/demo.html" />
+        <option value="$PROJECT_DIR$/bootstrap综合案例/index.html" />
+        <option value="$PROJECT_DIR$/bootstrap综合案例/demo主体.html" />
       </list>
     </option>
   </component>
@@ -128,12 +144,13 @@
       <workItem from="1577105315586" duration="5649000" />
       <workItem from="1577198851889" duration="1340000" />
       <workItem from="1577275465401" duration="3671000" />
-      <workItem from="1577284980783" duration="1242000" />
+      <workItem from="1577284980783" duration="1802000" />
+      <workItem from="1577341390521" duration="1889000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20708000" />
+    <option name="totallyTimeSpent" value="23157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -224,17 +241,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap综合案例/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" selection-start-line="5" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="1541">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo.html">
+    <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo轮播图.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="39" column="12" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="39" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap综合案例/demo主体.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
