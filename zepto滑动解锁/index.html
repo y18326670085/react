@@ -55,6 +55,10 @@
         .pattern>ul{
             margin-top: 0;
         }
+        .patt-lines{
+            background-color: #f33;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
@@ -97,6 +101,10 @@
             if(md5(num) == "30c5e24437a66eab77c7e668b091fef9"){ //7415369
                 alert("解锁成功");
                 $(".lock").css("z-index",1);
+            }else{
+                setTimeout(function () {
+                    pattern.reset();
+                }, 1000)
             }
         }
     });
