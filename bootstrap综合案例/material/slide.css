@@ -1,0 +1,64 @@
+*  {
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
+}
+html{
+    font-size: 100px;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.box img{
+    display: block;
+    width: 100%;
+}
+/*设置网页左上角头像按钮*/
+.userBtn{
+    width: 1rem;
+    height: 1rem;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+/*设置遮罩层样式*/
+.mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+/*设置侧边栏css样式*/
+.nav{
+    width: 4rem;
+    height: 100%;
+    background: #555;
+    /*正常侧边栏的初始位置在左边*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/*设置头像样式*/
+.user{
+    width: 2.5rem;
+}
+/*设置列表样式*/
+.nav ul li a{
+    display: block;
+    padding: .3rem 0;
+    font-size: .32rem;
+    color: #eee;
+    text-align: center;
+    text-decoration: none;
+}
+

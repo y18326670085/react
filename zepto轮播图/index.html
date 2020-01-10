@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+    initial-scale=1.0, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>zepto轮播图</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .box{
+            position: absolute;
+            /*整体布局横向四张图片*/
+            /*保证开始在A的位置*/
+            left: -100%;
+            top: 0;
+            width: 600%;
+            height: 200px;
+            /*background-color: #ccc;*/
+        }
+        .box>div{
+            width: 16.66666666667%;
+            height: 200px;
+            /*background-color: #ccc;*/
+            float: left;
+            /*line-height: 200px;*/
+            /*text-align: center;*/
+            /*font-size: 48px;*/
+            background-size: auto 200px;
+            background-position: 50%;
+        }
+        .a{ background-image: url("images/kgc1.jpg");}
+        .b{ background-image: url("images/kgc2.jpg");}
+        .c{ background-image: url("images/kgc3.jpg");}
+        .d{ background-image: url("images/kgc4.jpg");}
+
+        .nav{
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translate(-50%);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 30%;
+            height: 20px;
+            /*background-color: black;*/
+
+            /*flex的应用*/
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .nav>li{
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .nav>li.active{
+            background-color: #096;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <div class="d">D</div>
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="a">A</div>
+    </div>
+    <ul class="nav">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+
+</body>
+<script src="js/zepto.min.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/fx_methods.js"></script>
+<script src="js/selector.js"></script>
+<script src="js/touch.js"></script>
+<script>
+    var W = $(".container").width();
+    var canMove = true;
+
+    $(".box").on("swipeLeft", function(){
+        sLeft();
+    })
+
+    function sLeft(){
+        if(canMove){
+            clearInterval(time);
+            canMove = false;
+            var boxLeft = $(".box").position().left;
+
+            //获取box移动前的left
+            $(".box").animate({
+                left:boxLeft - W,
+            },300,function () { //动画完成后的回调
+                if($(".box").position().left == -5*W){ //最后一个div A
+                    $(".box").css({ left: -W }) //第一个 div A
+                }
+                navActive();
+            });
+            time = setInterval(sLeft, 4000);
+        }
+        console.log("swipeLeft")
+    }
+
+    time = setInterval(sLeft, 4000);
+    //A-B  4S 3S  滑动到B
+
+    $(".box").on("swipeRight", function(){
+        if(canMove){
+            canMove = false;
+            var boxLeft = $(".box").position().left;
+            $(".box").animate({
+                left:boxLeft + W,
+            },300,function () {
+                if($(".box").position().left == 0){ //第一个div D
+                    $(".box").css({ left: -4*W }) //最后一个 div D
+                }
+                navActive();
+            });
+            time = setInterval(sLeft, 4000);
+            console.log("swipeRight")
+        }
+    })
+    $(".box").on("transitionend", function(){
+        canMove = true;
+    })
+    
+    function  navActive() {
+        //获取对应的ABCD四张图片对应的下标0 1 2 3
+        var index = ($(".box").position().left/-W) - 1;
+        $(".nav li").eq(index).addClass('active')
+            .siblings().removeClass('active');
+    }
+
+
+</script>
+</html>

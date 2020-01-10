@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>侧边栏滑进滑出特效</title>
+    <link rel="stylesheet" href="slide.css">
+</head>
+<body>
+    <div>
+        <!--人物头像按钮-->
+        <div class="userBtn" id="userBtn"></div>
+        <!--网页主体内容-->
+        <img src="slideimgs/58suyun.png" alt="">
+    </div>
+    <!--遮罩层-->
+    <div class="mask" id="mask"></div>
+    <!--侧边栏-->
+    <div class="nav" id="nav">
+        <!--ul>li*6>a-->
+        <ul>
+            <li><a href="#"><img src="slideimgs/guest.png" alt=""></a></li>
+            <li><a href="#">我的余额</a></li>
+            <li><a href="#">我的订单</a></li>
+            <li><a href="#">我的收藏</a></li>
+            <li><a href="#">我的积分</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="slide.js"></script>
+<script>
+    // 思路：点击人物头像按钮，侧边栏从左侧滑出，遮罩层也显示；点击蒙层，侧边栏滑入，遮罩层隐藏
+    // 分别获取人物头像按钮、侧边栏、蒙层
+    var userBtn = document.getElementById("userBtn");
+    var mask = document.getElementById("mask");
+    var nav = document.getElementById("nav");
+    // 给人物头像按钮绑定事件
+    userBtn.addEventListener("click", function () {
+        //侧边栏从左侧滑出来，改变left的值
+        nav.style.left = "0";
+        mask.style.display = "block";
+    },false)
+
+    mask.addEventListener("click", function () {
+        nav.style.left = "-4rem";
+        mask.style.display = "block";
+    }, false)
+</script>

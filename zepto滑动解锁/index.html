@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0,
+    minimum-scale=1.0">
+    <link rel="stylesheet" href="css/patternLock.css">
+    <title>zepto滑动解锁</title>
+    <style>
+        html, body, .lock, .show{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .lock{
+            width: 100%;
+            background-image: url("images/bg1.png");
+            background-size: 100% 100%;
+            /*position: relative;*/
+            /*生成绝对定位的元素，相对于浏览器窗口进行定位*/
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 3;
+        }
+        .show{
+            width: 100%;
+            background-image: url("images/bg2.png");
+            background-size: 100% 100%;
+            /*display: none;*/
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+        }
+        .time{
+            text-align: center;
+            color: white;
+            font-size: 36px;
+            padding-top: 60px;
+        }
+        .date{
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            padding-top: 10px;
+        }
+        .pattern{
+            position: absolute;
+            background: none !important;
+            bottom: 10px;
+            /*left: 50%;*/
+            /*transform: translateX(-50%);*/
+        }
+        .pattern>ul{
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="lock">
+        <div class="time"></div>
+        <div class="date"></div>
+        <div class="pattern"></div>
+    </div>
+
+    <div class="show"></div>
+
+</body>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/patternLock.zepto.js"></script>
+<script src="js/md5.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/zh-cn.min.js"></script>
+
+<script>
+
+    //console.log(md5(7415369));
+
+    function updateTime(){
+        //引入moment.js快速格式化时间
+        var time = moment().format("hh:mm:ss");
+        var date = moment().format("ddd Do");
+        //把格式化后的时间更新到DOM中
+        $(".time").text(time)
+        $(".date").text(date)
+    }
+    updateTime();
+
+    //设置一个计时器，每秒钟更新一次DOM
+    setInterval(updateTime, 1000);
+
+    var pattern = new PatternLock(".pattern",{
+        onDraw: function (num) {
+            //console.log(num)
+            if(md5(num) == "30c5e24437a66eab77c7e668b091fef9"){ //7415369
+                alert("解锁成功");
+                $(".lock").css("z-index",1);
+            }
+        }
+    });
+
+</script>
+</html>
