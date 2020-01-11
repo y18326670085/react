@@ -63,12 +63,24 @@
         .content{
             display: flex;
             flex-flow: row wrap;
+            padding-top: 30px;
         }
         .box{
             width: 20%;
-            background-color: #ccc;
+            /*background-color: #ccc;*/
             padding: 5px;
             box-sizing: border-box;
+        }
+        .box>div{
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box>p{
+            text-align: center;
+            color: white;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -116,7 +128,9 @@
                 <p>App</p>
             </div>
         </div>
+
         <div class="footer"></div>
+
     </div>
 
 </body>
@@ -163,6 +177,7 @@
         // console.log(ele);
         var W = $(this).width();
         $(this).height(W);
+        $(this).css("background-color","#069");
 
     })
 
