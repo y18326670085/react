@@ -36,6 +36,7 @@
             display: none;
             background-image: url("images/bg.png");
             background-size: 100% 100%;
+            /*background-position: 0 30%;*/
         }
     </style>
 </head>
@@ -46,5 +47,31 @@
     <div class="game">
 
     </div>
+
+    <script src="js/zepto.min.js"></script>
+    <script>
+
+        var bodyW = $("body").width(); //获取body的宽度
+        var bodyH = $("body").height(); //获取body的高度
+        var gameBgtTop = 0;
+
+        //点击开始游戏，会把init隐藏，显示game的窗口
+        $(".start").on("click", function(){
+            $(".init").css("display", "none");
+            $(".game").css("display", "block");
+        })
+
+        setInterval(function(){
+            $(".game").css({
+                backgroundPosition: "0 " + gameBgtTop + "px"
+            })
+            //gameBgtTop ++;
+            gameBgtTop = gameBgtTop >= bodyH? 0: gameBgtTop+1;
+            //console.log(gameBgtTop);
+        },30)
+
+
+
+    </script>
 </body>
 </html>
