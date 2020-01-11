@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f614b28-5023-49a8-9561-26015bf91f6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zepto滑动解锁/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/zepto滑动解锁/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zepto滑动解锁/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+            <state relative-caret-position="428">
+              <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -107,12 +106,6 @@
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="zepto滑动解锁" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="zepto滑动解锁" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -175,12 +168,12 @@
       <workItem from="1578312823465" duration="1801000" />
       <workItem from="1578485094589" duration="5528000" />
       <workItem from="1578663061165" duration="7617000" />
-      <workItem from="1578708191302" duration="1523000" />
+      <workItem from="1578708191302" duration="2452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65359000" />
+    <option name="totallyTimeSpent" value="66288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -348,8 +341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zepto滑动解锁/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+        <state relative-caret-position="428">
+          <caret line="164" column="26" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
         </state>
       </provider>
     </entry>
