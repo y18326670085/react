@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .init,.game{
+            height: 100%;
+            position: relative;
+        }
+        .init{
+            background-image: url("images/init.png");
+            background-size: 100% 100%;
+        }
+        .start{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30%;
+            width: 50%;
+            height: 40px;
+            border: 2px solid gray;
+            border-radius: 20px;
+            text-align: center;
+            line-height: 40px;
+        }
+        .game{
+            display: none;
+            background-image: url("images/bg.png");
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="init">
+        <div class="start">开始游戏</div>
+    </div>
+    <div class="game">
+
+    </div>
+</body>
+</html>

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f614b28-5023-49a8-9561-26015bf91f6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/zepto滑动解锁/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/zepto滑动解锁/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zepto飞机大战/plane.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zepto滑动解锁/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="178" column="24" lean-forward="true" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+            <state relative-caret-position="37">
+              <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -28,20 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zepto滑动解锁/index-origin.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2323">
-              <caret line="101" selection-start-line="101" selection-end-line="105" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zepto滑动解锁/lock.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="322">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -52,8 +44,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -76,6 +68,7 @@
         <option value="$PROJECT_DIR$/zepto滑动解锁/js/lock.js" />
         <option value="$PROJECT_DIR$/zepto滑动解锁/lock.js" />
         <option value="$PROJECT_DIR$/zepto滑动解锁/index.html" />
+        <option value="$PROJECT_DIR$/zepto飞机大战/plane.html" />
       </list>
     </option>
   </component>
@@ -103,12 +96,7 @@
             <path>
               <item name="react" type="b2602c69:ProjectViewProjectNode" />
               <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="zepto滑动解锁" type="462c0819:PsiDirectoryNode" />
+              <item name="zepto飞机大战" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,12 +114,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WEB全栈\WEB项目\react\zepto滑动解锁" />
-      <recent name="D:\WEB全栈\WEB项目\react\zepto轮播图" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\WEB全栈\WEB项目\react\bootstrap综合案例\material\slideimgs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB全栈\WEB项目\react\zepto飞机大战" />
+      <recent name="D:\WEB全栈\WEB项目\react\zepto滑动解锁" />
+      <recent name="D:\WEB全栈\WEB项目\react\zepto轮播图" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,18 +161,18 @@
       <workItem from="1578312823465" duration="1801000" />
       <workItem from="1578485094589" duration="5528000" />
       <workItem from="1578663061165" duration="7617000" />
-      <workItem from="1578708191302" duration="8213000" />
+      <workItem from="1578708191302" duration="12563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72049000" />
+    <option name="totallyTimeSpent" value="76399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -345,8 +334,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zepto滑动解锁/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="178" column="24" lean-forward="true" selection-start-line="178" selection-start-column="24" selection-end-line="178" selection-end-column="24" />
+        <state relative-caret-position="37">
+          <caret line="227" column="6" lean-forward="true" selection-start-line="227" selection-start-column="6" selection-end-line="227" selection-end-column="6" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -365,6 +354,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>
