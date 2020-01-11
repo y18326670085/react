@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0,
     minimum-scale=1.0">
     <link rel="stylesheet" href="css/patternLock.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <title>zepto滑动解锁</title>
     <style>
         html, body, .lock, .show{
@@ -21,7 +22,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 3;
+            z-index: 1;
         }
         .show{
             width: 100%;
@@ -59,6 +60,16 @@
             background-color: #f33;
             opacity: 0.5;
         }
+        .content{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .box{
+            width: 20%;
+            background-color: #ccc;
+            padding: 5px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 <body>
@@ -68,7 +79,45 @@
         <div class="pattern"></div>
     </div>
 
-    <div class="show"></div>
+    <div class="show">
+        <div class="content">
+            <div class="box">
+                <div>
+                    <span class="fa fa-2x fa-star"></span>
+                </div>
+                <p>App</p>
+            </div>
+
+            <div class="box">
+                <div>
+                    <span class="fa fa-2x fa-star"></span>
+                </div>
+                <p>App</p>
+            </div>
+
+            <div class="box">
+                <div>
+                    <span class="fa fa-2x fa-star"></span>
+                </div>
+                <p>App</p>
+            </div>
+
+            <div class="box">
+                <div>
+                    <span class="fa fa-2x fa-star"></span>
+                </div>
+                <p>App</p>
+            </div>
+
+            <div class="box">
+                <div>
+                    <span class="fa fa-2x fa-star"></span>
+                </div>
+                <p>App</p>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
 
 </body>
 
@@ -99,7 +148,7 @@
         onDraw: function (num) {
             //console.log(num)
             if(md5(num) == "30c5e24437a66eab77c7e668b091fef9"){ //7415369
-                alert("解锁成功");
+                //alert("解锁成功");
                 $(".lock").css("z-index",1);
             }else{
                 setTimeout(function () {
