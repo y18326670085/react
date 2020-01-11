@@ -22,7 +22,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 1;
+            z-index: 3;
         }
         .show{
             width: 100%;
@@ -82,6 +82,14 @@
             color: white;
             margin: 5px 0;
         }
+        .footer{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +101,7 @@
 
     <div class="show">
         <div class="content">
-            <div class="box">
+            <!--<div class="box">
                 <div>
                     <span class="fa fa-2x fa-star"></span>
                 </div>
@@ -126,7 +134,7 @@
                     <span class="fa fa-2x fa-star"></span>
                 </div>
                 <p>App</p>
-            </div>
+            </div>-->
         </div>
 
         <div class="footer"></div>
@@ -164,6 +172,7 @@
             if(md5(num) == "30c5e24437a66eab77c7e668b091fef9"){ //7415369
                 //alert("解锁成功");
                 $(".lock").css("z-index",1);
+                pattern.reset();
             }else{
                 setTimeout(function () {
                     pattern.reset();
@@ -172,13 +181,63 @@
         }
     });
 
+    var apps = [
+        {icon: "fa-weibo", bg:"#369", title:"新闻"},
+        {icon: "fa-car", bg:"#366", title:"打车"},
+        {icon: "fa-bus", bg:"#399", title:"单车"},
+        {icon: "fa-gamepad", bg:"#669", title:"游戏"},
+        {icon: "fa-weixin", bg:"#069", title:"娱乐"},
+        {icon: "fa-github", bg:"#039", title:"直播"},
+        {icon: "fa-renren", bg:"#093", title:"餐饮"},
+        {icon: "fa-qq", bg:"#369", title:"电影"},
+        {icon: "fa-linux", bg:"#f69", title:"订票"},
+        {icon: "fa-rebel", bg:"#6ff", title:"锁屏"}
+    ]
+
+    var fApps = [
+        {icon: "fa-weibo", bg:"#369", title:"微信"},
+        {icon: "fa-car", bg:"#366", title:"浏览器"},
+        {icon: "fa-bus", bg:"#399", title:"短信"},
+        {icon: "fa-gamepad", bg:"#669", title:"电话"},
+        {icon: "fa-phone", bg:"#6ff", title:"邮件"}
+    ]
+
+    //zepto实现
+    apps.forEach(function(ele, index){
+        var divStr =
+            '<div class="box">' +
+                '<div style="background-color: ' + ele.bg + '" >' +
+                    '<span class="fa fa-2x ' + ele.icon + '"></span>' +
+                '</div>' +
+                '<p>' + ele.title + '</p>' +
+            '</div>';
+
+        $(".content").append($(divStr))
+    })
+
+    fApps.forEach(function(ele, index){
+        var divStr =
+            '<div class="box">' +
+            '<div style="background-color: ' + ele.bg + '" >' +
+            '<span class="fa fa-2x ' + ele.icon + '"></span>' +
+            '</div>' +
+            '<p>' + ele.title + '</p>' +
+            '</div>';
+
+        $(".footer").append($(divStr))
+    })
+
+
     $(".box>div").each(function(index, ele){
         // console.log(index);
         // console.log(ele);
         var W = $(this).width();
         $(this).height(W);
-        $(this).css("background-color","#069");
-
+        // $(this).css("background-color","#069");
+    })
+    
+    $(".fa-rebel").on("click", function () {
+        $(".lock").css("zIndex",3)
     })
 
     // $(".content").each(function(index,ele){
