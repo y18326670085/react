@@ -72,6 +72,10 @@
         var bullets = [];    //存放所有的子弹
         var enemys = [];     //存放敌方飞机
 
+        var control = 0; //游戏控制器
+
+
+
         //点击开始游戏，会把init隐藏，显示game的窗口
         $(".start").on("click", function(){
             $(".init").css("display", "none"); //隐藏游戏初始画面
@@ -123,7 +127,6 @@
 
                 //append添加bullet在背景图片
                 $(".game").append(this.$bullet);
-
                 this.move = function(){
                     this.$bullet.css({
                         // top: this.$bullet.css("top") - 5
@@ -131,8 +134,39 @@
                     })
                 }
             }
+            //_left,_top,
+            function Enemy(src,bSrc,_w,_h,hp,speed){
+                this.src = src; //敌机的图片
+                this.bSrc = bSrc;//敌机的爆炸图片
+                // this.left = _left;//敌机的初始left坐标
+                // this.top = _top;//敌机的初始top坐标
+                this.w = _w;//敌机的宽度
+                this.h = _h;//敌机的高度
+                this.hp = hp;//敌机的血量
+                this.speed = speed;//敌机的下降速度
+
+                this.$enemy = $("<img src='" + this.src + "'>");
+                this.$enemy.css({
+                    position: "absolute",
+                    left: (Math.random()*(bodyW - this.w)),
+                    top: -this.h  //初始的高度为图片高度的负值
+                });
+                //console.log("left : " + Math.random()*(bodyW - this.w));
+                //console.log("top : " + -this.h );
+                $(".game").append(this.$enemy);
+                this.move = function(){
+                    this.$enemy.css({
+                        // top: this.$bullet.css("top") - 5
+                        //top: this.$enemy.offset().top - 30
+                        top:this.$enemy.offset().top + this.speed
+                    })
+                }
+            }
 
             setInterval(function(){
+
+                control++;
+                //console.log("control" + control);
                 //不断的移动game的背景图的高度
                 $(".game").css({
                     backgroundPosition: "0 " + gameBgtTop + "px"
@@ -151,22 +185,36 @@
                 //console.log(bLeft, bTop);
 
                 //创建新的子弹，添加到bullets数组中
-                bullets.push(new Bullet(bLeft, bTop));
-
+                if(control%5 == 0){
+                    bullets.push(new Bullet(bLeft, bTop));
+                }
                 for(var i=0; i<bullets.length; i++){
-                    bullets[i].move()
-
+                    bullets[i].move();
                     //如果子弹超出了屏幕顶部，删除子弹
                     if(bullets[i].$bullet.offset().top < -14){
                         //删除DOM元素
                         bullets[i].$bullet.remove();
                         //删除数组元素
-                        bullets.splice(i,1)
+                        bullets.splice(i,1);
                     }
                 }
-
+                if(control%10 == 0){
+                    enemys.push(new Enemy("images/a.png", "images/a.gif", smallW,
+                        smallH, 1,1));
+                }
+                //console.log(enemys.length);
+                for(var i=0; i<enemys.length; i++){
+                    enemys[i].move();
+                    //如果子弹超出了屏幕顶部，删除子弹
+                    if(enemys[i].$enemy.offset().top > bodyH){
+                        //删除DOM元素
+                        enemys[i].$enemy.remove();
+                        //删除数组元素
+                        enemys.splice(i,1);
+                    }
+                }
+                control = control >= 500? 0: control;
             },30)
-
         })
 
 

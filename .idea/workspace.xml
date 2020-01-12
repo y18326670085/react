@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f614b28-5023-49a8-9561-26015bf91f6f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/zepto飞机大战/plane_origin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zepto飞机大战/plane.html" beforeDir="false" afterPath="$PROJECT_DIR$/zepto飞机大战/plane.html" afterDir="false" />
     </list>
@@ -19,8 +20,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-87">
-              <caret line="102" column="64" lean-forward="true" selection-start-line="102" selection-start-column="64" selection-end-line="102" selection-end-column="64" />
+            <state relative-caret-position="414">
+              <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane_origin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="221" column="46" lean-forward="true" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -35,6 +45,13 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Enemy</find>
+      <find>Bullet</find>
+      <find>speed</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,12 +108,6 @@
               <item name="react" type="462c0819:PsiDirectoryNode" />
               <item name="zepto飞机大战" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react" type="462c0819:PsiDirectoryNode" />
-              <item name="zepto飞机大战" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -112,13 +123,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WEB全栈\WEB项目\react\bootstrap综合案例\material\slideimgs" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WEB全栈\WEB项目\react\zepto飞机大战" />
       <recent name="D:\WEB全栈\WEB项目\react\zepto滑动解锁" />
       <recent name="D:\WEB全栈\WEB项目\react\zepto轮播图" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WEB全栈\WEB项目\react\bootstrap综合案例\material\slideimgs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -160,12 +171,12 @@
       <workItem from="1578485094589" duration="5528000" />
       <workItem from="1578663061165" duration="7617000" />
       <workItem from="1578708191302" duration="18619000" />
-      <workItem from="1578794790056" duration="16075000" />
+      <workItem from="1578794790056" duration="24680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98530000" />
+    <option name="totallyTimeSpent" value="107135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -358,10 +369,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zepto飞机大战/images/a.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zepto飞机大战/images/a.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane_origin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="221" column="46" lean-forward="true" selection-start-line="221" selection-start-column="46" selection-end-line="221" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zepto飞机大战/plane.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="102" column="64" lean-forward="true" selection-start-line="102" selection-start-column="64" selection-end-line="102" selection-end-column="64" />
+        <state relative-caret-position="414">
+          <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
         </state>
       </provider>
     </entry>
