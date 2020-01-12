@@ -38,6 +38,10 @@
             background-size: 100% 100%;
             /*background-position: 0 30%;*/
         }
+        .plane{
+            position: absolute;
+            bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +49,7 @@
         <div class="start">开始游戏</div>
     </div>
     <div class="game">
-
+        <img class="plane" src="images/p.png" alt="">
     </div>
 
     <script src="js/zepto.min.js"></script>
@@ -53,22 +57,119 @@
 
         var bodyW = $("body").width(); //获取body的宽度
         var bodyH = $("body").height(); //获取body的高度
-        var gameBgtTop = 0;
+        var gameBgtTop = 0;  //game背景图的初始高度
+        var planeW = 66;     //飞机宽度
+        var planeH = 80;     //飞机高度
+        var smallW = 34;     //小飞机宽度
+        var smallH = 24;
+        var middleW = 46;    //中飞机宽度
+        var middleH = 60;
+        var bigW = 110;      //大飞机宽度
+        var bigH = 169;
+        var bulletH = 6;     //子弹宽度
+        var bulletW = 14;
+
+        var bullets = [];    //存放所有的子弹
+        var enemys = [];     //存放敌方飞机
 
         //点击开始游戏，会把init隐藏，显示game的窗口
         $(".start").on("click", function(){
-            $(".init").css("display", "none");
-            $(".game").css("display", "block");
+            $(".init").css("display", "none"); //隐藏游戏初始画面
+            $(".game").css("display", "block"); //打开游戏画面
+
+
+            //把我方飞机位置居中
+            $(".plane").css("left", (bodyW - planeW)/2);
+
+            //控制我方飞机的移动
+            $(".plane").on("touchstart", function (e) {
+                //首先获取点击时手指和图片位置的距离
+                var disX = e.targetTouches[0].pageX - $(this).offset().left;
+                // console.log("e.targetTouches[0].pageX = " + e.targetTouches[0].pageX);
+                // console.log("$(this).offset().left = " + $(this).offset().left);
+                var disY = e.targetTouches[0].pageY - $(this).offset().top;
+
+                $(".plane").on("touchmove", function (e) {
+                    //通过当前的手指的位置获取元素的位置
+                    var pLeft = e.targetTouches[0].pageX - disX;
+                    //console.log("e.targetTouches[0].pageX = " + e.targetTouches[0].pageX)
+                    var pTop = e.targetTouches[0].pageY - disY;
+
+                    //控制飞机元素不能超出左右边界
+                    pLeft = pLeft <= 0? 0: pLeft;
+                    pLeft = pLeft >= (bodyW - planeW)? (bodyW-planeW): pLeft;
+                    //控制飞机元素不能超出上下边界
+                    pTop = pTop <= 0? 0: pTop;
+                    pTop = pTop >= (bodyH - planeH)? (bodyH-planeH): pTop;
+                    //改变元素的位置
+                    $(this).css({
+                        left: pLeft,
+                        top: pTop
+                    })
+                })
+                //当手指离开屏幕，解除touchstart, touchmove的事件绑定
+                $(".plane").on("touchend", function () {
+                    $(".plane").off('touchstart', 'touchmove');
+                })
+            })
+
+            function Bullet(_left, _top){
+                this.$bullet = $("<img src='images/bullet.png'>");
+                this.$bullet.css({
+                    position: "absolute",
+                    left: _left,
+                    top: _top
+                });
+
+                //append添加bullet在背景图片
+                $(".game").append(this.$bullet);
+
+                this.move = function(){
+                    this.$bullet.css({
+                        // top: this.$bullet.css("top") - 5
+                        top: this.$bullet.offset().top - 30
+                    })
+                }
+            }
+
+            setInterval(function(){
+                //不断的移动game的背景图的高度
+                $(".game").css({
+                    backgroundPosition: "0 " + gameBgtTop + "px"
+                })
+                //gameBgtTop ++;
+                //背景图高度大于窗口高度时归零
+                gameBgtTop = gameBgtTop >= bodyH? 0: gameBgtTop+1;
+                //console.log(gameBgtTop);
+
+                //用css获取的值带px
+                //创建子弹，通过我方飞机的位置来判断子弹的初始位置
+                // var bLeft = $(".plane").css("left") + (planeW - bulletW)/2;
+                var bLeft = $(".plane").offset().left + (planeW - bulletW)/2;
+                //var bTop = $(".plane").css("top");
+                var bTop = $(".plane").offset().top;
+                //console.log(bLeft, bTop);
+
+                //创建新的子弹，添加到bullets数组中
+                bullets.push(new Bullet(bLeft, bTop));
+
+                for(var i=0; i<bullets.length; i++){
+                    bullets[i].move()
+
+                    //如果子弹超出了屏幕顶部，删除子弹
+                    if(bullets[i].$bullet.offset().top < -14){
+                        //删除DOM元素
+                        bullets[i].$bullet.remove();
+                        //删除数组元素
+                        bullets.splice(i,1)
+                    }
+                }
+
+            },30)
+
         })
 
-        setInterval(function(){
-            $(".game").css({
-                backgroundPosition: "0 " + gameBgtTop + "px"
-            })
-            //gameBgtTop ++;
-            gameBgtTop = gameBgtTop >= bodyH? 0: gameBgtTop+1;
-            //console.log(gameBgtTop);
-        },30)
+
 
 
 
